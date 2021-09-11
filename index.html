@@ -15,11 +15,11 @@
 
 <body>
     <header class="header" style="background-image: url('img/header-bg.jpg');">
-        <div class="container">
-            <div class="header__inner">
-                <nav class="header__top">
+        <div class="header__top">
+            <div class="container">
+                <nav class="header__navigation">
                     <a class="logo header__logo" href="#">
-                        <img class="logo__img" src="img/logo.svg"></img>
+                        <img class="logo__img" src="img/logo.svg" alt="Логотип">
                     </a>
                     <ul class="menu">
                         <li class="menu__item">
@@ -53,20 +53,29 @@
                             </a>
                         </li>
                     </ul>
+                    <button class="menu__burger" type="button">
+                        <span class="menu__line"></span>
+                        <span class="sr-only">
+                            При клике на эту кнопку откроется мобильное меню
+                        </span>
+                    </button>
                 </nav>
-                <div class="header__content">
-                    <h1 class="header__title">Привет, я Иван Иванов
-                        <span class="header__span">frontend- разработчик</span>
-                    </h1>
-                    <a class="header__link" href="#">
-                        Смотреть работы
-                    </a>
-                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="header__content">
+                <h1 class="header__title">Привет, я Иван Иванов
+                    <span class="header__span">frontend- разработчик</span>
+                </h1>
+                <a class="header__link" href="#">
+                    Смотреть работы
+                </a>
             </div>
         </div>
     </header>
 
-    <main class="main">
+    <!--<main class="main">
         <section class="section about">
             <div class="container">
                 <h2 class="title">
@@ -95,24 +104,29 @@
                     Навыки
                 </h2>
                 <div class="skills__inner">
-                    <img class="skills__img" src="img/ivan.jpg"></img>
+                    <img class="skills__img" src="img/ivan.jpg" alt="Иван Иванов">
                     <ul class="skills__info">
                         <li class="skills__item">
                             html
                             <div class="skills__unfill">
-                                <span class="skills__fill" style="width: calc(100% - 30%)"></span>
+                                <span class="skills__fill" style="width: calc(100% - 15%)">
+                                    <span class="sr-only">Я знаю html на 85%</span>
+                                </span>
                             </div>
                         </li>
                         <li class="skills__item">
                             css
                             <div class="skills__unfill">
-                                <span class="skills__fill" style="width: calc(100% - 40%)"></span>
+                                <span class="skills__fill" style="width: calc(100% - 20%)">
+                                    <span class="sr-only">Я знаю css на 80%</span></span>
                             </div>
                         </li>
                         <li class="skills__item">
                             js
                             <div class="skills__unfill">
-                                <span class="skills__fill" style="width: calc(100% - 50%)"></span>
+                                <span class="skills__fill" style="width: calc(100% - 40%)">
+                                    <span class="sr-only">Я знаю js на 40%</span>
+                                </span>
                             </div>
                         </li>
                     </ul>
@@ -125,6 +139,7 @@
                 <h2 class="title service__title">
                     Услуги
                 </h2>
+
                 <ul class="service__items">
                     <li class="service__item service__item--code">
                         <h3 class="service__headding">
@@ -172,19 +187,16 @@
                                 Все работы
                             </button>
                         </li>
-
                         <li class="works__catalog">
                             <button class="works__btn" type="button" data-filter=".category-landing">
                                 Лендинги
                             </button>
                         </li>
-
                         <li class="works__catalog">
                             <button class="works__btn" type="button" data-filter=".category-corporate">
                                 Корпоративные
                             </button>
                         </li>
-
                         <li class="works__catalog">
                             <button class="works__btn" type="button" data-filter=".category-commerce">
                                 E-commerce
@@ -192,6 +204,9 @@
                         </li>
                     </ul>
 
+                    <span class="sr-only">
+                        Далее представлены мои работы. Кликните по ссылке, чтобы её открыть.
+                    </span>
                     <ul class="works__items">
                         <li class="works__item mix category-landing">
                             <a class="works__link" href="img/works/work-1.jpg" data-fancybox="gallery">
@@ -239,6 +254,9 @@
                         Отзывы клиентов
                     </h2>
 
+                    <span class="sr-only">
+                        Слайдер с отзывами, который можно верстать.
+                    </span>
                     <ul class="reviews__items">
                         <li class="reviews__item">
                             <div class="reviews__content">
@@ -254,7 +272,12 @@
                                     </p>
                                 </div>
                             </div>
-                            <a class="reviews__video" href="#" style="background-image: url('img/video.jpg');" data-fancybox href="https://www.youtube.com/watch?v=ITXiwv7bC84"></a>
+                            <a class="reviews__video" style="background-image: url('img/video.jpg');" data-fancybox
+                                href="https://www.youtube.com/watch?v=ITXiwv7bC84">
+                                <span class="sr-only">
+                                    Кликнув по ссылке откроется видео отзыв от Марка Цукерберга
+                                </span>
+                            </a>
                         </li>
 
                         <li class="reviews__item">
@@ -270,7 +293,12 @@
                                     </p>
                                 </div>
                             </div>
-                            <a class="reviews__video" href="#" style="background-image: url('img/video.jpg');" data-fancybox href="https://www.youtube.com/watch?v=Yl3pa6kp65Q"></a>
+                            <a class="reviews__video" style="background-image: url('img/video.jpg');" data-fancybox
+                                href="https://www.youtube.com/watch?v=Yl3pa6kp65Q">
+                                <span class="sr-only">
+                                    Кликнув по ссылке откроется видео отзыв от Илона Маска
+                                </span>
+                            </a>
                         </li>
 
                         <li class="reviews__item">
@@ -281,11 +309,16 @@
                                 </p>
                                 <div class="reviews__text">
                                     <p>
-                                        Не ожидал, что работа будет сделана так быстро и качественно! Всем рекомендую.
+                                        Не ожидал, что работа будет сделана так быстро и качественно! Всем
+                                        рекомендую.
                                     </p>
                                 </div>
                             </div>
-                            <a class="reviews__video" href="#" style="background-image: url('img/video.jpg');" data-fancybox href="https://www.youtube.com/watch?v=bHYVBJSrjEc">
+                            <a class="reviews__video" style="background-image: url('img/video.jpg');" data-fancybox
+                                href="https://www.youtube.com/watch?v=bHYVBJSrjEc">
+                                <span class="sr-only">
+                                    Кликнув по ссылке откроется видео отзыв от Павла Дурова
+                                </span>
                             </a>
                         </li>
                     </ul>
@@ -295,6 +328,9 @@
 
         <section class="section statistics">
             <div class="container">
+                <h2 class="sr-only">
+                    Статистика
+                </h2>
                 <ul class="statistics__items">
                     <li class="statistics__item statistics__item--works">
                         <p class="statistics__name">
@@ -357,39 +393,66 @@
 
                         <ul class="contacts__items">
                             <li class="contacts__item">
-                                <a class="contacts__link contacts__link--instagramm" href="#"></a>
+                                <a class="contacts__link contacts__link--instagramm" href="#">
+                                    <span class="sr-only">
+                                        Кликнув по ссылке Вы перейдете в мой instagram
+                                    </span>
+                                </a>
                             </li>
                             <li class="contacts__item">
-                                <a class="contacts__link contacts__link--facebook" href="#"></a>
+                                <a class="contacts__link contacts__link--facebook" href="#">
+                                    <span class="sr-only">
+                                        Кликнув по ссылке Вы перейдете в мой facebook
+                                    </span>
+                                </a>
                             </li>
                             <li class="contacts__item">
-                                <a class="contacts__link contacts__link--telegram" href="#"></a>
+                                <a class="contacts__link contacts__link--telegram" href="#">
+                                    <span class="sr-only">
+                                        Кликнув по ссылке Вы перейдете в мой telegram
+                                    </span>
+                                </a>
                             </li>
                         </ul>
                     </div>
 
                     <form class="form">
                         <div class="form__top">
-                            <label class="form__label">Ваше имя
-                                <input class="form__enter form__name" name="username" type="text" placeholder="Иван">
+                            <label class="form__label">
+                                Ваше имя
+                                <input class="form__enter form__name" name="username" type="text" placeholder="Иван"
+                                    required>
                             </label>
 
-                            <label class="form__label">Номер телефона
-                                <input class="form__enter form__phone" name="userphone" type="number" placeholder="+380501111111">
-                            </label>
-
-                            <label class="form__label">Ваше сообщение
-                                <textarea class="form__enter form__textarea" name="usertext" type="text" placeholder="Текст вашего сообщения">
+                            <label class="form__label">
+                                Номер телефона
+                                <input class="form__enter form__phone" name="userphone" type="tel"
+                                    placeholder="+380501111111" required>
                             </label>
                         </div>
-                        <button class="button" type="button">
+                        <label class="form__label">Ваше сообщение
+                            <textarea class="form__enter form__textarea" placeholder="Текст вашего сообщения"
+                                required></textarea>
+                        </label>
+                        <button class="button" type="submit">
                             Отправить
                         </button>
                     </form>
                 </div>
             </div>
         </section>
-    </main>
+    </main>-->
+
+    <footer class="footer">
+        <div class="container">
+            <a class="logo footer__logo" href="#">
+                <img class="logo__img" src="img/logo.svg" alt="Логотип">
+            </a>
+        </div>
+    </footer>
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
